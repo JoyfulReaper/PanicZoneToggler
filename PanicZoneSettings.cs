@@ -43,7 +43,7 @@ namespace PanicZoneToggler
         {
             get
             {
-                return "0.0.3";
+                return "0.0.4";
             }
         }
 
@@ -52,7 +52,7 @@ namespace PanicZoneToggler
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
 
-            listingStandard.Label("Panic Zone Toggler Settings", 24f);
+            listingStandard.Label($"Panic Zone Toggler {Version} Settings", 24f);
             listingStandard.Gap(12f);
 
             listingStandard.Label("Panic Area Name: ");
@@ -76,11 +76,11 @@ namespace PanicZoneToggler
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref TargetArea, "targetZoneName", "Panic");
-            Scribe_Values.Look(ref ShowButton, "showButton", true);
-            Scribe_Values.Look(ref PanicHumans, "panicHumans", true);
-            Scribe_Values.Look(ref PanicAnimals, "panicAnimals", true);
-            Scribe_Values.Look(ref PanicMechs, "panicMechs", true);
+            Scribe_Values.Look(ref TargetArea, "TargetArea", "Panic");
+            Scribe_Values.Look(ref ShowButton, "ShowButton", true);
+            Scribe_Values.Look(ref PanicHumans, "PanicHumans", true);
+            Scribe_Values.Look(ref PanicAnimals, "PanicAnimals", true);
+            Scribe_Values.Look(ref PanicMechs, "PanicMechs", true);
         }
     }
 }
