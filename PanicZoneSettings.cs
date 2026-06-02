@@ -52,7 +52,8 @@ namespace PanicZoneToggler
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
 
-            listingStandard.Label($"Panic Zone Toggler {Version} Settings", 24f);
+            string titleText = $"Panic Zone Toggler {Version} Settings";
+            listingStandard.Label(titleText, 24f);
             listingStandard.Gap(12f);
 
             listingStandard.Label("Panic Area Name: ");
