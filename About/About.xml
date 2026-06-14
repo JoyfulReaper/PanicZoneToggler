@@ -3,7 +3,7 @@
   <packageId>KyleGivler.PanicZoneToggler</packageId>
   <name>Panic Zone Toggler</name>
   <author>Kyle Givler</author>
-  <description>An emergency response utility that instantly forces all player-controlled pawns, mechanoids, and animals into a designated "Panic" allowed area. No more pausing the game to manually reassign dozens of individual restriction zones while a massive raid breaches your walls.
+  <description>An emergency response utility that instantly forces all player-controlled pawns mechanoids and animals into a designated Panic allowed area. No more pausing the game to manually reassign dozens of individual restriction zones while a massive raid breaches your walls
 
   Default hotkey is 'p' you can change it from RimWorld's native keybindings interface.
 
