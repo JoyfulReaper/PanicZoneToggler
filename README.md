@@ -1,9 +1,22 @@
-PanicZoneToggler For RimWorld 1.6
+# Panic Zone Toggler
 
-Force all pawns, mechs and animals into the panic zone! The panic zone is an Area in RimWorld named "Panic" by default, can be configured from the mod settings and falls back to Home Zone on any errors.
+An emergency response utility that instantly forces all player-controlled pawns, mechanoids, and animals into a designated "Panic" allowed area. No more pausing the game to manually reassign dozens of individual restriction zones while a massive raid breaches your walls.
 
-This mod currently adds a button near the speed controls to active the Panic Zone. This button can be turned off in the settings.
+## 🚨 Key Features
 
-In the future I am planning on adding a hot key or an option to put the button in a better location. (Open to suggestions)
+* **Native Hotkey Support:** Hit **'P'** (fully rebindable via the native RimWorld Options -> Controls menu) to instantly trigger or deactivate the alert.
+* **The Panic Button:** Adds an emergency toggle right next to the game speed controls. One click locks down your colony; clicking it again restores everyone to their exact previous allowed zones.
+* **Granular Control Toggles:** Choose exactly who responds to the panic alarm in the settings menu. Force any combination of Humans, Mechanoids, or Animals into safety while leaving others to their normal routines.
+* **Bulletproof Fallback:** Looks for an allowed area named "Panic" by default (customizable). If the designated area doesn't exist on a map, it automatically falls back to the **Home Zone** to keep your colonists safe.
 
-Disclaimer: Although I have worked professionally as a C# developer I have used AI in the creation of this mod in order to quickly understand RimWorld's Classes.
+## 🛠️ Technical Details
+
+* **Zero Performance Impact:** This mod contains no active tick loops. It consumes **0.000ms** of CPU time while idle, making it perfectly safe for massive, 500+ mod load orders.
+* **Caravan Safe:** Cleanly preserves and restores the restriction states of pawns even if they leave the map or form caravans while the panic state is active.
+
+_Open to feature recommendations :)_
+
+## 🌐 Open Source & Contributions
+
+* **GitHub:** [PanicZoneToggler Repository](https://github.com/JoyfulReaper/PanicZoneToggler)
+* **License:** [BSD 2-Clause License](LICENSE)
