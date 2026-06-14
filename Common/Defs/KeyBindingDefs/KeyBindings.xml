@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <KeyBindingCategoryDef>
+    <defName>PanicZoneToggler_Controls</defName>
+    <label>Panic Zone Toggler</label>
+    <description>Controls for toggling the panic zone.</description>
+  </KeyBindingCategoryDef>
+
+  <KeyBindingDef>
+    <defName>PanicZone_Toggle</defName>
+    <label>Toggle Panic Zone</label>
+    <description>Instantly switch between the Panic Zone and previous restrictions.</description>
+    <category>PanicZoneToggler_Controls</category>
+    <defaultKeyCodeA>P</defaultKeyCodeA>
+  </KeyBindingDef>
+</Defs>

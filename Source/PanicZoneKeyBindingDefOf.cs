@@ -26,30 +26,18 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  **/
 
-
-using UnityEngine;
+using RimWorld;
 using Verse;
 
-namespace PanicZoneToggler
+namespace PanicZoneToggler;
+
+[DefOf]
+public static class PanicZoneKeyBindingDefOf
 {
-    public class PanicZoneMod : Mod
+    public static KeyBindingDef PanicZone_Toggle;
+
+    static PanicZoneKeyBindingDefOf()
     {
-        public static PanicZoneSettings Settings;
-
-        public PanicZoneMod(ModContentPack content) : base(content)
-        {
-            Settings = GetSettings<PanicZoneSettings>();
-        }
-
-        public override string SettingsCategory()
-        {
-            return "Panic Zone Toggler";
-        }
-
-        public override void DoSettingsWindowContents(Rect inRect)
-        {
-            Settings.DoSettingsWindowContents(inRect);
-            base.DoSettingsWindowContents(inRect);
-        }
+        DefOfHelper.EnsureInitializedInCtor(typeof(PanicZoneKeyBindingDefOf));
     }
 }

@@ -1,15 +1,14 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PanicZoneToggler")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Panic Zone Toggler")]
+[assembly: AssemblyDescription("Toggle the Panic Zone!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PanicZoneToggler")]
+[assembly: AssemblyCompany("Kyle Givler")]
+[assembly: AssemblyProduct("Panic Zone Toggler")]
 [assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
