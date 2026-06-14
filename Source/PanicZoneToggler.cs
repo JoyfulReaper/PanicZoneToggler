@@ -58,10 +58,10 @@ public class MapComponent_PanicToggle : MapComponent
 
     private void EnablePanicZone()
     {
-        Area targetArea = map.areaManager.GetLabeled(PanicZoneMod.Settings.TargetArea);
+        Area targetArea = map.areaManager.GetLabeled(PanicZoneTogglerMod.Settings.TargetArea);
         if (targetArea == null)
         {
-            Messages.Message($"Unable to locate Area: {PanicZoneMod.Settings.TargetArea}", MessageTypeDefOf.CautionInput);
+            Messages.Message($"Unable to locate Area: {PanicZoneTogglerMod.Settings.TargetArea}", MessageTypeDefOf.CautionInput);
             targetArea = map.areaManager.GetLabeled("Home");
             if (targetArea == null)
             {
@@ -73,9 +73,9 @@ public class MapComponent_PanicToggle : MapComponent
         PreviousRestrictions.Clear();
         List<Pawn> allColonyPawns = map.mapPawns.PawnsInFaction(Faction.OfPlayer);
 
-        bool panicHumans = PanicZoneMod.Settings.PanicHumans;
-        bool panicMechs = PanicZoneMod.Settings.PanicMechs;
-        bool panicAnimals = PanicZoneMod.Settings.PanicAnimals;
+        bool panicHumans = PanicZoneTogglerMod.Settings.PanicHumans;
+        bool panicMechs = PanicZoneTogglerMod.Settings.PanicMechs;
+        bool panicAnimals = PanicZoneTogglerMod.Settings.PanicAnimals;
 
         foreach (Pawn pawn in allColonyPawns)
         {
@@ -125,7 +125,7 @@ public class MapComponent_PanicToggle : MapComponent
             }
         }
 
-        if (!PanicZoneMod.Settings.ShowButton)
+        if (!PanicZoneTogglerMod.Settings.ShowButton)
             return;
 
         base.MapComponentOnGUI();

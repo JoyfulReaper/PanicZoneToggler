@@ -32,11 +32,11 @@ using Verse;
 
 namespace PanicZoneToggler;
 
-public class PanicZoneMod : Mod
+public class PanicZoneTogglerMod : Mod
 {
     public static PanicZoneSettings Settings;
 
-    public PanicZoneMod(ModContentPack content) : base(content)
+    public PanicZoneTogglerMod(ModContentPack content) : base(content)
     {
         Settings = GetSettings<PanicZoneSettings>();
     }
