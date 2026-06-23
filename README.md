@@ -1,22 +1,58 @@
-# Panic Zone Toggler
+# [PZT-CORE: SYSTEMS ARCHITECTURE MANUAL]
 
-An emergency response utility that instantly forces all player-controlled pawns, mechanoids, and animals into a designated "Panic" allowed area. No more pausing the game to manually reassign dozens of individual restriction zones while a massive raid breaches your walls.
+**PROTOCOL ID:** PZT-EVAC-01  
+**CODENAME:** Panic Zone Toggler  
+**SYSTEM STATUS:** OPERATIONAL  
+**MAINTAINER:** K. GIVLER (ADMIN)  
 
-## 🚨 Key Features
+---
 
-* **Native Hotkey Support:** Hit **'P'** (fully rebindable via the native RimWorld Options -> Controls menu) to instantly trigger or deactivate the alert.
-* **The Panic Button:** Adds an emergency toggle right next to the game speed controls. One click locks down your colony; clicking it again restores everyone to their exact previous allowed zones.
-* **Granular Control Toggles:** Choose exactly who responds to the panic alarm in the settings menu. Force any combination of Humans, Mechanoids, or Animals into safety while leaving others to their normal routines.
-* **Bulletproof Fallback:** Looks for an allowed area named "Panic" by default (customizable). If the designated area doesn't exist on a map, it automatically falls back to the **Home Zone** to keep your colonists safe.
+## 1.0 SYSTEM OVERVIEW
 
-## 🛠️ Technical Details
+The **Panic Zone Toggler** is an emergency containment and rapid threat-evacuation utility designed for the *RimWorld* colonist-management framework. During high-threat events (such as hostile breaches or structural incursions), manual re-allocation of individual zone assignments introduces severe latency and operational overhead.
 
-* **Zero Performance Impact:** This mod contains no active tick loops. It consumes **0.000ms** of CPU time while idle, making it perfectly safe for massive, 500+ mod load orders.
-* **Caravan Safe:** Cleanly preserves and restores the restriction states of pawns even if they leave the map or form caravans while the panic state is active.
+This utility intercepts the zone restriction architecture, executing a global, instantaneous override that routes all player-controlled assets into a designated lockdown zone.
 
-_Open to feature recommendations :)_
+## 2.0 FUNCTIONAL CAPABILITIES
 
-## 🌐 Open Source & Contributions
+The system features an automated lockdown pipeline operated via two primary input vectors:
 
-* **GitHub:** [PanicZoneToggler Repository](https://github.com/JoyfulReaper/PanicZoneToggler)
-* **License:** [BSD 2-Clause License](LICENSE)
+* **Hardware Interrupt (Hotkey Support):** Operates natively via the `'P'` keybind registry. The trigger signal can be completely remapped within the baseline configuration menu (`Options -> Controls`) for rapid deployment.
+* **Console Interface Override:** Injects an emergency toggle switch directly adjacent to the simulation speed controls. Activating the interface forces immediate relocation; deactivating the switch safely rolls back all targeted assets to their exact pre-panic zone configurations.
+* **Redundancy Fallback Routine:** The framework scans local map arrays for an allowed area matching the `"Panic"` string key. If the targeted area definition cannot be verified, the routine automatically routes assets to the baseline **Home Zone** allocation index to preserve unit integrity.
+
+## 3.0 SUBSYSTEM CONFIGURATION MATRIX
+
+Administrators can isolate or combine target classes within the utility configuration panel to control which assets respond to the emergency signal:
+
+| Target Vector Class | Operational Assignment | Routine Behavior |
+| --- | --- | --- |
+| **Humanoid Assets** | Colonists | Immediate containment routing |
+| **Mechanized Assets** | Player-controlled mechanoids | Immediate containment routing |
+| **Biological Assets** | Domesticated colony animals | Immediate containment routing |
+
+* *Note: Any combination of the above vectors can be toggled independent of one another, allowing functional units to remain on schedule while non-combatants flee.*
+
+## 4.0 TECHNICAL SPECIFICATIONS
+
+The system architecture is engineered to adhere to strict high-efficiency coding standards:
+
+* **Polled Memory Footprint:** The framework contains no active tick loops or asynchronous polling threads. While in an idle state, the mod consumes exactly **0.000ms** of CPU execution time, rendering it fully compatible with massive 500+ modification load profiles.
+* **Volatile Reference Preservation (Caravan Stability):** The utility features isolated tracking state retention. Assets that exit the primary simulation map boundaries or merge into caravan vectors while the lockdown signal is active will cleanly preserve their assigned pre-panic zones upon re-instantiation.
+
+## 5.0 SYSTEM ACCESS NODES
+
+* **[Source Code Repository (GitHub)](https://github.com/JoyfulReaper/PanicZoneToggler)**
+* **[Distribution Rights (BSD 2-Clause License)](https://www.google.com/search?q=LICENSE)**
+
+---
+
+## 6.0 LEGAL & COMPLIANCE
+
+**COPYRIGHT NOTICE:** © 2026 Kyle Givler.
+
+**DISTRIBUTION:** This software utility is distributed under open-source compliance standards. The administrator welcomes structural recommendations or features optimized for high-threat containment execution paths.
+
+---
+
+**[PZT-CORE: SYSTEMS ARCHITECTURE MANUAL]**
